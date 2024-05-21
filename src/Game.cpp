@@ -33,4 +33,5 @@ void Game::updateEntities()
 
 void Game::drawFrame()
 {
+    brd.draw(rw);
 }

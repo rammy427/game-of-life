@@ -1,4 +1,4 @@
-#include "RamWindow.h"
+#include "Board.h"
 
 #ifndef GAME_H
 #define GAME_H
@@ -17,6 +17,7 @@ private:
     sf::RenderWindow& rw;
     sf::Clock clock;
     /** Game Variables **/
+    Board brd;
 };
 
 #endif

@@ -10,7 +10,7 @@ FetchContent_Declare(SFML
     GIT_TAG 2.6.x)
 FetchContent_MakeAvailable(SFML)
 
-add_executable(ConwayLife WIN32 src/main.cpp src/Game.cpp)
+add_executable(ConwayLife WIN32 src/main.cpp src/Game.cpp src/Board.cpp)
 target_link_libraries(ConwayLife PRIVATE sfml-graphics)
 target_compile_features(ConwayLife PRIVATE cxx_std_17)
 
