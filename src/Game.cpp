@@ -28,7 +28,7 @@ void Game::processEvents()
 
 void Game::updateEntities()
 {
-    float dt = clock.restart().asSeconds();
+    brd.update();
 }
 
 void Game::drawFrame()
