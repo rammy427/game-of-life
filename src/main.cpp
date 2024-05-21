@@ -6,7 +6,7 @@ int main()
     sf::RenderWindow window(sf::VideoMode(SCREEN_WIDTH, SCREEN_HEIGHT), "John Conway's Game of Life", sf::Style::Close);
 
     // Window settings.
-    window.setFramerateLimit(60);
+    window.setFramerateLimit(5);
     window.setKeyRepeatEnabled(false);
 
     // Start game loop.
