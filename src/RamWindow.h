@@ -1,7 +1,7 @@
 #include <SFML/Graphics.hpp>
 
-static constexpr int SCREEN_WIDTH = 1600;
-static constexpr int SCREEN_HEIGHT = 900;
+static constexpr int SCREEN_WIDTH = 1280;
+static constexpr int SCREEN_HEIGHT = 720;
 
 static sf::Vector2f GetScreenCenter()
 {

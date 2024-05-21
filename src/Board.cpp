@@ -50,6 +50,7 @@ Board::Board()
 
 void Board::update()
 {
+    std::vector<sf::Vector2i> marked_tiles;
     for (int y = 0; y < height; y++)
         for (int x = 0; x < width; x++)
         {
@@ -57,8 +58,11 @@ void Board::update()
             int count = countNeighbors({x, y});
             if ((tile.isActive() && (count < 2 || count > 3))
                 || (!tile.isActive() && count == 3))
-                tile.toggle();
+                marked_tiles.emplace_back(x, y);
         }
+
+    for (sf::Vector2i& v : marked_tiles)
+        tileAt(v).toggle();
 }
 
 void Board::draw(sf::RenderWindow& rw)
@@ -82,7 +86,7 @@ int Board::countNeighbors(const sf::Vector2i& gridPos)
     int count = 0;
     for (int y = y_start; y <= y_end; y++)
         for (int x = x_start; x <= x_end; x++)
-            if (tileAt({x, y}).isActive())
+            if (gridPos != sf::Vector2i(x, y) && tileAt({x, y}).isActive())
                 count++;
     
     return count;
